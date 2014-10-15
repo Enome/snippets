@@ -21,3 +21,27 @@ snippet , f
 	});
 snippet chai
 	var expect = require('chai').expect;
+snippet test
+	/*global describe, it*/
+
+	describe('${1}', function () {
+	  
+	  it('${2}', function () {
+		  ${3}
+	  });
+
+	});
+snippet test+
+	/*global describe, it, beforeEach*/
+
+	describe('${1}', function () {
+	  
+	  beforeEach(function () {
+		  ${1}
+	  });
+
+	  it('${3}', function () {
+		  ${4}
+	  });
+
+	});
