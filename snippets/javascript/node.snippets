@@ -3,39 +3,47 @@ snippet mod
 	  ${0}
 	};
 
-	module.exports = $1;
+	export default $1;
 snippet modf
-	var ${1:Module} = function () {
+	var ${1:Module} = () => {
 	  ${0}
 	};
 
-	module.exports = $1;
+	export default $1;
 snippet req
 	var ${1:module} = require('${0}$1');
-snippet import
+snippet imp
 	import ${1:module} from '${0}$1';
 snippet self
 	var self = this;${0}
 snippet , f
-	function () {
+	() => {
 	});
 snippet chai
-	var expect = require('chai').expect;
+	import {expect} from 'chai';
 snippet test
 	/*global describe, it*/
 
-	describe('${1}', function () {
+	import {expect} from 'chai';
+
+	describe('${1}', () => {
 	  
-	  it('${2}', function () {
+	  it('${2}', () => {
 		  ${3}
 	  });
 
 	});
+snippet expect
+	expect(${1}).to.eql(${2});
 snippet describe
-	describe('${1}', function () {
-		${2}	  
+	describe('${1}', () => {
+	  
+	  it('${2}', () => {
+		  ${3}
+	  });
+
 	});
 snippet it
-	it('${1}', function () {
+	it('${1}', () => {
 		${2}	  
 	});

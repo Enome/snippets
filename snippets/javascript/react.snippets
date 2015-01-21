@@ -1,7 +1,7 @@
 snippet react
 	/** @jsx React.DOM */
 
-	var React = require('react');
+	import React from 'react';
 
 	var ${1:Component} = React.createClass({
 
@@ -11,31 +11,31 @@ snippet react
 
 	  /* RENDER */
 
-	  render: function () {
+	  render () {
 	    return (${0});
 	  },
 
 	});
 
-	module.exports = $1;
+	export default $1;
 snippet rrouter
 	import {${1:Routes, Route, Link}} from 'react-router';
 snippet rprops
-	componentWillReceiveProps: function (props) {
+	componentWillReceiveProps (props) {
 	  ${0}
 	},
 snippet dmount
-	componentDidMount: function () {
+	componentDidMount () {
 	  ${0}
 	},
 snippet istate
-	getInitialState: function () {
+	getInitialState () {
 	  return {
 	    ${0}
 	  };
 	},
 snippet dprops
-	getDefaultProps: function () {
+	getDefaultProps () {
 	  return {
 	    ${0}
 	  };
