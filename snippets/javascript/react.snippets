@@ -1,6 +1,4 @@
 snippet react
-	/** @jsx React.DOM */
-
 	import React from 'react';
 
 	var ${1:Component} = React.createClass({
@@ -18,6 +16,21 @@ snippet react
 	});
 
 	export default $1;
+snippet omni
+	import React from 'react';
+	import C from 'omniscient';
+
+	var render = function () {
+		
+		return (
+			<${2:tag}>
+				${0}
+			</${2}>
+		);
+
+	};
+
+	export default C('${1:Name}', render).jsx;
 snippet rrouter
 	import {${1:Routes, Route, Link}} from 'react-router';
 snippet rprops
