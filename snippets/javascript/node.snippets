@@ -27,23 +27,20 @@ snippet test
 	import {expect} from 'chai';
 
 	describe('${1}', () => {
-	  
-	  it('${2}', () => {
-		  ${3}
-	  });
-
+	  ${2}
 	});
 snippet expect
 	expect(${1}).to.eql(${2});
 snippet describe
 	describe('${1}', () => {
-	  
-	  it('${2}', () => {
-		  ${3}
-	  });
-
+	  ${2}
 	});
 snippet it
 	it('${1}', () => {
 		${2}	  
+		var result = {};
+		var expected = {};
+
+		expect(result).to.eql(expected);
+
 	});
