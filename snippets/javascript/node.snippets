@@ -29,6 +29,20 @@ snippet test
 	describe('${1}', () => {
 	  ${2}
 	});
+snippet ava
+	import test from 'ava';
+
+	test('${1}', t => {
+		${2}var result = {};
+		var expected = {};
+		t.deepEqual(result, expected);
+	});
+snippet t
+	test('${1}', t => {
+		${2}var result = {};
+		var expected = {};
+		t.deepEqual(result, expected);
+	});
 snippet expect
 	expect(${1}).to.eql(${2});
 snippet describe
