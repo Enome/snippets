@@ -32,14 +32,14 @@ snippet test
 snippet ava
 	import test from 'ava';
 
-	test('${1}', t => {
-		${2}var result = {};
+	test('${1} - ${2} -> ${3}', t => {
+		${4}var result = {};
 		var expected = {};
 		t.deepEqual(result, expected);
 	});
 snippet t
-	test('${1}', t => {
-		${2}var result = {};
+	test('${1} - ${2} -> ${3}', t => {
+		${4}var result = {};
 		var expected = {};
 		t.deepEqual(result, expected);
 	});
