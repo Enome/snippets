@@ -29,6 +29,20 @@ snippet test
 	describe('${1}', () => {
 	  ${2}
 	});
+snippet jest
+	/*global test, expect*/
+
+	test('${1} -> ${2}', () => {
+		${3}var result = {};
+		var expected = {};
+		expect(result).toEqual(expected);
+	});
+snippet j
+	test('${1} -> ${2}', () => {
+		${3}var result = {};
+		var expected = {};
+		expect(result).toEqual(expected);
+	});
 snippet ava
 	import test from 'ava';
 
