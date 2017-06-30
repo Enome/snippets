@@ -1,4 +1,4 @@
-snippet react
+snippet reactclass
 	import React, { Component } from 'react';
 
 	class ${1:Component} extends Component {
@@ -22,23 +22,20 @@ snippet react
 	}
 
 	export default $1;
-snippet omni
+snippet reactfn
 	import React from 'react';
-	import C from 'omniscient';
 
-	var render = function () {
-		
+	var ${1:Component} = function (props) {
+
 		return (
-			<${2:div} className='$1'>
+			<div>
 				${0}
-			</$2>
+			</div>
 		);
 
 	};
 
-	export default C('${1:Name}', render).jsx;
-snippet rrouter
-	import {${1:Routes, Route, Link}} from 'react-router';
+	export default $1;
 snippet rprops
 	componentWillReceiveProps (props) {
 	  ${0}
