@@ -1,21 +1,27 @@
 snippet react
-	import React from 'react';
+	import React, { Component } from 'react';
 
-	var ${1:Component} = React.createClass({
+	class ${1:Component} extends Component {
 
-	  /* LOGIC */
+		constructor (props) {
+			super(props);
+		}
 
-	  /* LIFECYCLE EVENTS */
+		/* LOGIC */
+		/* LIFECYCLE */
+		/* RENDER */
 
-	  /* RENDER */
+		render () {
+			return (
+				<div>
+					${0}
+				</div>
+			);
+		}
 
-	  render () {
-	    return (${0});
-	  },
+	}
 
-	});
-
-	export default $1;
+export default $1;
 snippet omni
 	import React from 'react';
 	import C from 'omniscient';
